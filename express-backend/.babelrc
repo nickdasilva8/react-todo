@@ -1,0 +1,6 @@
+/**
+ * sets presets that babel can use/need in order to allow babel to be used.
+ */
+{
+  "presets": ["react", "es2015", "stage-1"]
+}

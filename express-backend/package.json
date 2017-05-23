@@ -1,0 +1,22 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "node and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickdasilva8/todo-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickdasilva8/todo-app/issues"
+  },
+  "homepage": "https://github.com/nickdasilva8/todo-app#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
