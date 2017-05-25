@@ -1,15 +1,42 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import 'whatwg-fetch';
+
+import { Col } from 'react-bootstrap/lib/';
 
 class App extends Component {
-  state = {users: []}
+  
+  constructor(props){
+    super(props);
 
-  componentDidMount() {
-    fetch('/todo-get')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
+    this.state = {
+      listItems: []
+    };
+
+    this.getItems = this.getItems.bind(this);
   }
+
+  getItems(url){
+    fetch(url)
+      .then(res => {
+        return res.json();
+      })
+      .then(returnedData => {
+        this.setState({
+          listItems: returnedData
+        });
+        console.log(this.state.listItems);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  componentWillMount(){
+    this.getItems(`${this.props.baseUrl}/todo-get/`);
+  }
+
   render() {
     return (
       <div className="App">
@@ -17,9 +44,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div> 
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <Col sm={12} md={10} mdOffset={1}>
+
+        </Col>
+
       </div>
     );
   }
