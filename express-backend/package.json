@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/nickdasilva8/todo-app#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "pg-promise": "^5.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
