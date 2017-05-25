@@ -9,8 +9,5 @@ var pgp = require('pg-promise')();
  * @return {object} - Database Object
  */
 module.exports = () => {
-   return pgp('postgres://nick1:password@localhost:5432/tododb');
+   return pgp('postgres://docker:docker@localhost:32769/tododb');
 };
-
-
-
